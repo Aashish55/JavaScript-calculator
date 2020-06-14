@@ -4,68 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <title>Calculator Grid</title>
-    <style>
-        body{
-    /*margin: 10% 37%; 
-    */padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-    
-}
-.background{
-    background-image: linear-gradient(to right bottom, #f5a8d7, #a7e5e1);
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.container{
-    
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.btn{
-    padding: 10px;
-    height: 60px;
-    width: 60px;
-    margin: 5px;
-    color: #fff;
-    border: none;
-    background-color: lightslategray;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 8px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.btn-equalto{
-    width: 135px;
-    background-color: mediumseagreen;
-}
-.inputfield{
-    width: 100%;
-}
-.input-section{
-    height: 60px;
-    width: 275px;
-    background-color:#f1f2f9;
-    margin-left: 5px;
-    border: 1px solid lightgrey;
-    margin-bottom: 5px;
-    text-align: right;
-    font-size: 40px;
-    border-radius: 8px;
-}
-.input-section:focus{
-    border: none;
-}
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Calculator</title>
 </head>
 
 <body>
@@ -112,44 +52,7 @@
     
         </div>
     </div>
-    <script>
-        var input= document.querySelector('.input-section')
-        var firstValue=0;
-        var point =false;
-
-        function buttonClicked(value){
-            input.value+=value
-        }
-
-        function deleteButton(){
-            
-            for(var i =0;i< input.value.length;i++){
-                
-            }
-        }
-        function pointButton(value){
-            if(point===false){
-                input.value+=value
-                point=true
-            }
-        }
-        function operationButton(operator){
-            firstValue= input.value +operator
-
-            console.log(input.value + operator)
-            clearButton()     
-            point=false       
-        }
-        function equals(){
-            
-            input.value=eval(firstValue + input.value)
-            point=false
-        }
-
-        function clearButton(){
-            input.value=''
-        }
-    </script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
